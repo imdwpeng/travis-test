@@ -16,7 +16,7 @@ before_script:
 
 # 无其他依赖项所以执行npm test 构建就行了
 script:
-#  - mocha
+  - npm test
 
 after_script:
   - cd ./dist
