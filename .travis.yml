@@ -19,8 +19,6 @@ script:
   - npm test
   - npm run cover
 
-after_script: "cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js"
-
 # 阶段成功时执行
 after_success:
   - cd ./test
