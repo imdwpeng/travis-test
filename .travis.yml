@@ -19,7 +19,7 @@ script:
   - npm test
 
 after_script:
-  - cd ./dist
+  - cd ./test
   - git init
   - git config user.name "${U_NAME}"
   - git config user.email "${U_EMAIL}"
