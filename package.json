@@ -3,20 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
-    "chai": "^4.1.2",
-    "mocha": "^5.0.4"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "coveralls": "^3.0.0",
-    "install": "^0.10.4",
-    "istanbul": "^0.4.5",
-    "mocha-lcov-reporter": "^1.3.0"
+    "chai": "^4.1.2",
+    "coveralls": "^2.13.3",
+    "gulp": "^3.8.10",
+    "istanbul": "^0.3.5",
+    "mocha": "^2.5.3"
   },
-  "scripts": {
-    "test": "mocha",
-    "cover": "./node_modules/.bin/istanbul cover _mocha",
-    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
+  "scirpts": {
+    "test": "mocha"
   },
   "repository": {
     "type": "git",

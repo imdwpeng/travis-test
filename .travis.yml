@@ -17,7 +17,6 @@ before_script:
 # 无其他依赖项所以执行npm test 构建就行了
 script:
   - npm test
-  - npm run cover
 
 # 阶段成功时执行
 after_success:
