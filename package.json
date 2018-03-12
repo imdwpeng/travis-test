@@ -12,7 +12,8 @@
     "istanbul": "^0.4.5"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "cover": "istanbul cover --report lcov node_modules/mocha/bin/_mocha -- -R spec test/*.js"
   },
   "repository": {
     "type": "git",

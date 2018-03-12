@@ -17,9 +17,9 @@ before_script:
 # 无其他依赖项所以执行npm test 构建就行了
 script:
   - npm test
+  - npm run cover
 
-after_script:
-  - NODE_ENV=test ./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
+after_script: "cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js"
 
 # 阶段成功时执行
 after_success:
