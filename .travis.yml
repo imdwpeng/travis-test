@@ -18,6 +18,7 @@ before_script:
 script:
   - npm test
 
+# 阶段成功时执行
 after_success:
   - cd ./test
   - git init
@@ -28,6 +29,7 @@ after_success:
   - git push --force --quiet "https://${GIT_TOKEN}@${GH_REF}" master:${P_BRANCH}
 # E: Build LifeCycle
 
+# 阶段失败时执行
 after_failure:
   - git status
 
