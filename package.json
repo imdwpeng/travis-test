@@ -11,7 +11,7 @@
     "istanbul": "^0.3.5",
     "mocha": "^2.5.3"
   },
-  "scirpts": {
+  "scripts": {
     "test": "NODE_ENV=test ./node_modules/.bin/_mocha",
     "cov": "NODE_ENV=test ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
