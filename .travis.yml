@@ -18,9 +18,6 @@ before_script:
 script:
   - npm test
 
-after_script:
-  - npm run cov
-
 # 阶段成功时执行
 after_success:
   - cd ./test
@@ -30,6 +27,8 @@ after_success:
   - git add .
   - git commit -m "Update tools"
   - git push --force --quiet "https://${GIT_TOKEN}@${GH_REF}" master:${P_BRANCH}
+  - npm run cov    # coveralls
+
 # E: Build LifeCycle
 
 # 阶段失败时执行
